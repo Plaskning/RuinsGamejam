@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1d6b2e859af0c04e84aa26a60f886fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 300
+  money: 250
 --- !u!1 &7023463559434361024
 GameObject:
   m_ObjectHideFlags: 0

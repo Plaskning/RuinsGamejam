@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = velocity;
 
-        if (Input.GetMouseButtonDown(0) && scoreManager.money > 0)
+        if (Input.GetMouseButtonDown(0) && scoreManager.money >= 100)
         {
             SwitchDirection(100);
         }

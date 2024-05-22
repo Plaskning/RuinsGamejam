@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sellPointPrefab:
+  - {fileID: 4205573169981878591, guid: 0e8db3ec72685a9428adf0428d72d522, type: 3}
   - {fileID: 4205573169981878591, guid: c3df5f4b3cbd5c14fb5ba69e956191e2, type: 3}
   spawnerTop: 13
   spawnerBottom: -13
