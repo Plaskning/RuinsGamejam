@@ -35,7 +35,7 @@ public class sellSpawner : MonoBehaviour
             elapsedTime = 0;
             if (currentSellPoints < maxSellPoints)
             {
-                Instantiate(sellPointPrefab, new Vector3(0, Random.Range(spawnerTop,spawnerBottom), 0), Quaternion.identity);
+                Instantiate(sellPointPrefab, new Vector3(transform.position.x, transform.position.y + Random.Range(spawnerTop,spawnerBottom), transform.position.z), Quaternion.identity);
                 currentSellPoints++;
             }
         }
