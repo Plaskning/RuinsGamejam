@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 7439287726801818033}
   - component: {fileID: 3331083255281848248}
   m_Layer: 0
-  m_Name: BIGMONEY
+  m_Name: PositiveBigMoney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

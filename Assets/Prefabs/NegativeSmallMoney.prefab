@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 9025090863192999632}
   - component: {fileID: 9211182693497910123}
-  - component: {fileID: 6210484077282122569}
   - component: {fileID: 7439287726801818033}
+  - component: {fileID: 7518641513523006705}
   m_Layer: 0
-  m_Name: SellPoint
+  m_Name: NegativeSmallMoney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,18 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6210484077282122569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4205573169981878591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e4974e815b3cd746bc9764693696447, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &7439287726801818033
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -125,6 +113,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &7518641513523006705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4205573169981878591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1d6b2e859af0c04e84aa26a60f886fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: -100
 --- !u!1 &7023463559434361024
 GameObject:
   m_ObjectHideFlags: 0
