@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private int UpwardrotationAmount;
     [SerializeField] private int DownwardrotationAmount;
     [SerializeField] private bool isFacingUp;
+
+    [SerializeField] Score scoreManager;
     #endregion
 
     // Start is called before the first frame update
@@ -28,20 +30,19 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = velocity;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && scoreManager.money > 0)
         {
-            SwitchDirection();
+            SwitchDirection(100);
         }
-
-        HeightChecker();
     }
 
-    public void SwitchDirection()
+    public void SwitchDirection(int scoreChange)
     {
 
         //Spawna in en grej
         //sfx
         //cool stuff
+        scoreManager.LoseScore(scoreChange);
         if (isFacingUp)
         {
             isFacingUp = false;
@@ -56,25 +57,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
-    public void HeightChecker()
-    {
-        if(transform.position.y >= 29)
-        {
-            SwitchDirection();
-        }
-
-        if(transform.position.y <= 1)
-        {
-            Debug.Log("End screen");
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("TopWall"))
+        if (other.CompareTag("TopWall") && isFacingUp)
         {
-            SwitchDirection();
+            SwitchDirection(0);
         }
         else if (other.CompareTag("BotWall"))
         {
