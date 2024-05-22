@@ -7,9 +7,13 @@ using Object = UnityEngine.Object;
 public class BigMoney : MonoBehaviour
 {
     private Score _score;
-    private void OnCollisionEnter(Collision other)
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        _score.GainScore();
-        Destroy(gameObject);
+        if (other.CompareTag("Player"))
+        {
+            _score.GainScore(200);
+            Destroy(gameObject);
+        }
     }
 }

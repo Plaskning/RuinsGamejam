@@ -8,21 +8,23 @@ public class Score : MonoBehaviour
 {
     public TMP_Text moneyText;
     [HideInInspector] public int money;
+    [SerializeField] public int startingMoney;
 
     public void Start()
     {
-        money = 0;
-    }
-
-    public void GainScore()
-    {
-        money += 50;
+        money = startingMoney;
         moneyText.SetText(money.ToString());
     }
 
-    public void LoseScore()
+    public void GainScore(int moneyGain)
     {
-        money -= 50;
+        money += moneyGain;
+        moneyText.SetText(money.ToString());
+    }
+
+    public void LoseScore(int moneyLoss)
+    {
+        money -= moneyLoss;
         moneyText.SetText(money.ToString());
     }
 }
