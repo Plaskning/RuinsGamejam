@@ -15,6 +15,7 @@ public class sellSpawner : MonoBehaviour
     [SerializeField] float spawnRate;
     [SerializeField] int minRespawnTime;
     [SerializeField] int maxRespawnTime;
+    [SerializeField] int additionalBadRolls;
     
     public float elapsedTime = 0.0f;
 
@@ -26,7 +27,9 @@ public class sellSpawner : MonoBehaviour
         if (elapsedTime > spawnRate)
         {
             elapsedTime = 0;
-            int var = Random.Range(0, sellPointPrefab.Length);
+            int var = Random.Range(0, sellPointPrefab.Length + additionalBadRolls);
+            if (var > 0)
+                var = 1;
             spawnRate = Random.Range(minRespawnTime, maxRespawnTime);
             Instantiate(sellPointPrefab[var], new Vector3(transform.position.x, transform.position.y + Random.Range(spawnerTop,spawnerBottom), transform.position.z), Quaternion.identity);
         }

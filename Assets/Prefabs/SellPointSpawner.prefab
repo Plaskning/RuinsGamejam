@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 3986904427651380343}
   - component: {fileID: 3986904427651380342}
   - component: {fileID: 3986904427651380341}
-  - component: {fileID: 5574050631478494463}
-  - component: {fileID: 3252734648975250278}
   m_Layer: 0
   m_Name: SellPointSpawner
   m_TagString: Untagged
@@ -101,48 +99,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb63388f8dfcf164391a364c68e24738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sellPointPrefab: {fileID: 0}
-  maxSellPoints: 2
-  spawnerTop: 4
-  spawnerBottom: -4
-  currentSellPoints: 0
+  sellPointPrefab:
+  - {fileID: 4205573169981878591, guid: c3df5f4b3cbd5c14fb5ba69e956191e2, type: 3}
+  spawnerTop: 13
+  spawnerBottom: -13
   spawnRate: 2
+  minRespawnTime: 2
+  maxRespawnTime: 13
+  additionalBadRolls: 1
   elapsedTime: 0
---- !u!50 &5574050631478494463
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3986904427651380340}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!114 &3252734648975250278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3986904427651380340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0060fdc34d22b44d9171cb6060085a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocity: {x: 1, y: 0}
-  moveSpeed: 5
 --- !u!1 &6644462483494622379
 GameObject:
   m_ObjectHideFlags: 0
