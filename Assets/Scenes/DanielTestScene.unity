@@ -304,6 +304,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3986904427651380341, guid: e90b5b817c618aa46a683e2d39ef9358, type: 3}
       propertyPath: spawnRate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3986904427651380341, guid: e90b5b817c618aa46a683e2d39ef9358, type: 3}
+      propertyPath: maxSellPoints
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3986904427651380343, guid: e90b5b817c618aa46a683e2d39ef9358, type: 3}

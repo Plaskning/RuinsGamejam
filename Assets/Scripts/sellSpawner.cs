@@ -29,12 +29,15 @@ public class sellSpawner : MonoBehaviour
     void Update()
     {
         elapsedTime += Time.deltaTime;
-        
-        if (currentSellPoints < maxSellPoints && elapsedTime > spawnRate)
+
+        if (elapsedTime > spawnRate)
         {
             elapsedTime = 0;
-            Instantiate(sellPointPrefab, new Vector3(0, Random.Range(spawnerTop,spawnerBottom), 0), Quaternion.identity);
-            currentSellPoints++;
+            if (currentSellPoints < maxSellPoints)
+            {
+                Instantiate(sellPointPrefab, new Vector3(0, Random.Range(spawnerTop,spawnerBottom), 0), Quaternion.identity);
+                currentSellPoints++;
+            }
         }
     }
 }
