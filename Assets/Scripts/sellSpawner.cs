@@ -25,6 +25,7 @@ public class sellSpawner : MonoBehaviour
 
         if (elapsedTime > spawnRate)
         {
+            elapsedTime = 0;
             int var = Random.Range(0, sellPointPrefab.Length);
             spawnRate = Random.Range(minRespawnTime, maxRespawnTime);
             Instantiate(sellPointPrefab[var], new Vector3(transform.position.x, transform.position.y + Random.Range(spawnerTop,spawnerBottom), transform.position.z), Quaternion.identity);
