@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class sellSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject sellPointPrefab;
+    [SerializeField] private GameObject[] sellPointPrefab;
 
-    [SerializeField] private int maxSellPoints = 0;
 
     [SerializeField] private float spawnerTop;
 
     [SerializeField] private float spawnerBottom;
 
-    public int currentSellPoints = 0;
     
     [SerializeField] float spawnRate;
+    [SerializeField] int minRespawnTime;
+    [SerializeField] int maxRespawnTime;
     
     public float elapsedTime = 0.0f;
 
@@ -25,12 +25,9 @@ public class sellSpawner : MonoBehaviour
 
         if (elapsedTime > spawnRate)
         {
-            elapsedTime = 0;
-            if (currentSellPoints < maxSellPoints)
-            {
-                Instantiate(sellPointPrefab, new Vector3(transform.position.x, transform.position.y + Random.Range(spawnerTop,spawnerBottom), transform.position.z), Quaternion.identity);
-                currentSellPoints++;
-            }
+            int var = Random.Range(0, sellPointPrefab.Length);
+            spawnRate = Random.Range(minRespawnTime, maxRespawnTime);
+            Instantiate(sellPointPrefab[var], new Vector3(transform.position.x, transform.position.y + Random.Range(spawnerTop,spawnerBottom), transform.position.z), Quaternion.identity);
         }
     }
 }
