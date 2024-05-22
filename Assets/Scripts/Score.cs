@@ -7,24 +7,24 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     public TMP_Text moneyText;
-    [HideInInspector] public int money;
     [SerializeField] public int startingMoney;
+    [SerializeField] private ScoreSO _scoreSo;
 
     public void Start()
     {
-        money = startingMoney;
-        moneyText.SetText(money.ToString());
+        _scoreSo._score = startingMoney;
+        moneyText.SetText(_scoreSo._score.ToString());
     }
 
     public void GainScore(int moneyGain)
     {
-        money += moneyGain;
-        moneyText.SetText(money.ToString());
+        _scoreSo._score += moneyGain;
+        moneyText.SetText(_scoreSo._score.ToString());
     }
 
     public void LoseScore(int moneyLoss)
     {
-        money -= moneyLoss;
-        moneyText.SetText(money.ToString());
+        _scoreSo._score -= moneyLoss;
+        moneyText.SetText(_scoreSo._score.ToString());
     }
 }
