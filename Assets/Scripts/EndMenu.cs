@@ -12,6 +12,6 @@ public class EndMenu : MonoBehaviour
 
     public void GoBackToMenu()
     {
-        SceneManager.LoadScene("MenuTest");
+        SceneManager.LoadScene("MainMenu");
     }
 }
