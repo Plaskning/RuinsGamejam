@@ -22,7 +22,11 @@ public class MoneyPickup : MonoBehaviour
             _score = score;
         }
 
-        costText.SetText(money.ToString());
+        if (GetComponentInChildren<TMP_Text>())
+        {
+            costText.SetText(money.ToString());
+        }
+        
 
     }
 
